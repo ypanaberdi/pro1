@@ -1,13 +1,11 @@
-with t1 as (
-    select f1.x as x1, f1.y as y1, f2.x as x2, f2.y as y2, case when (f1.x = f2.y and f1.y = f2.x) then 1 else 0 end as flag
-    from functions f1
-     join functions f2
-      on f1.x = f2.y and f1.y = f2.x 
-    where f1.x <> f2.x and f1.y <> f2.y
-    ) 
-
-select * from (
-    select  x1 as x, y1 as y, flag
-    from t1
-) t8
-order by x asc
+WITH x AS (SELECT n FROM (VALUES (0),(1),(2),(3),(4),(5),(6),(7),(8),(9)) v(n)),
+numbers as (SELECT ones.n + 10*tens.n + 100*hundreds.n +1 as n
+FROM x ones,     x tens,      x hundreds
+)
+select STRING_AGG(prime,'&') prime from (
+    select n.n as prime
+    from numbers n, numbers ndiv
+    where n.n>=ndiv.n
+    group by n.n
+    having sum(case when n.n%ndiv.n = 0 then 1 else 0 end )=2
+) t3

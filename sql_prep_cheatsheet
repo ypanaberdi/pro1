@@ -1,13 +1,21 @@
-#Normalization
+#NORMALIZATION
 1NF (First Normal Form) Rules
 Each table cell should contain a single value.
 Each record needs to be unique.
 
 The data depends on the key [1NF],
-the whole key [2NF]
-and nothing but the key [3NF].
+the whole key [2NF] + [1NF]
+and nothing but the key [3NF] + [2NF].
+BCNF - Boyce-Codd, When Primary key = All other columns 
+Compound/Composite keys.
 
-#keys
+#KEYS
 super keys: all kind of keys including redundant columns.
 candidate keys: unique keys that doesn't need to include redundant keys, subset of super keys.
 primary keys: one unique key that are taken from candidate keys.
+alternate keys: all other candidate keys that are not chosen as a primary one.
+https://www.guru99.com/dbms-keys.html
+
+#INDEXES
+
+#TUNING/OPTIMIZATION

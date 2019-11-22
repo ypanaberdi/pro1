@@ -1,4 +1,4 @@
-Normalization
+#Normalization
 1NF (First Normal Form) Rules
 Each table cell should contain a single value.
 Each record needs to be unique.
@@ -6,3 +6,8 @@ Each record needs to be unique.
 The data depends on the key [1NF],
 the whole key [2NF]
 and nothing but the key [3NF].
+
+#keys
+super keys: all kind of keys including redundant columns.
+candidate keys: unique keys that doesn't need to include redundant keys, subset of super keys.
+primary keys: one unique key that are taken from candidate keys.

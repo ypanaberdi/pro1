@@ -1,5 +1,4 @@
 #SQL
-exists
 
 #NORMALIZATION
 1NF (First Normal Form) Rules
@@ -24,13 +23,19 @@ Foreighn key can be null
 https://www.guru99.com/dbms-keys.html
 
 #INDEXES
+B-TREE (Always balanced, depth is equal at every leaf)
+Tree + Double LinkedList
+O(log(n))
+
+
 Statistics?
 
 #TUNING/OPTIMIZATION
 
 # WAREHOUSE CONCEPTS
 SCD types.
-
+DIMENSIONAL MODELLING
+OLAP CUBES
 
 #STATISTICS
 Mode

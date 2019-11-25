@@ -25,7 +25,10 @@ https://www.guru99.com/dbms-keys.html
 #INDEXES
 B-TREE (Always balanced, depth is equal at every leaf)
 Tree + Double LinkedList
-O(log(n))
+O(log(n)) - for B-tree,
+
+why index might be slow?
+An index lookup requires three steps: (1) the tree traversal; (2) following the leaf node chain; (3) fetching the table data.
 
 
 Statistics?

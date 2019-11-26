@@ -30,8 +30,15 @@ O(log(n)) - for B-tree,
 why index might be slow?
 An index lookup requires three steps: (1) the tree traversal; (2) following the leaf node chain; (3) fetching the table data.
 
+Even though the two-index solution delivers very good select performance as well, the single-index solution is preferable.
+It not only saves storage space, but also the maintenance overhead for the second index.
+The fewer indexes a table has, the better the insert, delete and update performance.
 
-Statistics?
+#STATISTICS
+VACUUM -- garbage-collect and optionally analyze a database
+VACUUM ANALYZE performs a VACUUM and then an ANALYZE for each selected table.
+
+
 
 #TUNING/OPTIMIZATION
 

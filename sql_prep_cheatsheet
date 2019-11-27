@@ -40,13 +40,21 @@ Rule-based optimizers (RBO) generate the execution plan using a hard-coded rule 
 
 The efficiency of an INDEX RANGE SCAN may vary over a wide range—especially when followed by a table access. Using an index does not automatically mean a statement is executed in the best way possible.
 
+PostgreSQL and the Oracle database trust the DETERMINISTIC or IMMUTABLE declarations—that means they trust the developer.
+
 #STATISTICS
 VACUUM -- garbage-collect and optionally analyze a database
 VACUUM ANALYZE performs a VACUUM and then an ANALYZE for each selected table.
 
-
+High cardinality means that the column contains a large percentage of totally unique values.
+Low cardinality means that the column contains a lot of “repeats” in its data range
+Cardinality relationships between tables can take the form of one-to-one,
+one-to-many (whose reversal is many-to-one) or many-to-many. 
 
 #TUNING/OPTIMIZATION
+
+In all reality, there are only a few cases in which the actual values affect the execution plan. You should therefore use bind parameters if in doubt—just to prevent SQL injections.
+
 
 # WAREHOUSE CONCEPTS
 SCD types.

@@ -54,7 +54,7 @@ one-to-many (whose reversal is many-to-one) or many-to-many.
 #TUNING/OPTIMIZATION
 
 In all reality, there are only a few cases in which the actual values affect the execution plan. You should therefore use bind parameters if in doubt—just to prevent SQL injections.
-
+A partial index is useful for commonly used where conditions that use constant values
 
 # WAREHOUSE CONCEPTS
 SCD types.

@@ -42,6 +42,14 @@ The efficiency of an INDEX RANGE SCAN may vary over a wide range—especially wh
 
 PostgreSQL and the Oracle database trust the DETERMINISTIC or IMMUTABLE declarations—that means they trust the developer.
 
+Indx types:
+B-Tree - For most datatypes and queries
+GIN - For JSONB/hstore/arrays
+GiST - For full text search and geospatial datatypes
+SP-GiST - For larger datasets with natural but uneven clustering
+BRIN - For really large datasets that line up sequentially
+Hash - For equality operations, and generally B-Tree still what you want here
+
 #STATISTICS
 VACUUM -- garbage-collect and optionally analyze a database
 VACUUM ANALYZE performs a VACUUM and then an ANALYZE for each selected table.

@@ -70,7 +70,7 @@ DIMENSIONAL MODELLING
 Granularity is the lowest level of information stored in the table.
 Fact table measurements and dimenstion table attributes. 
 
-Characteristics of Star Schema:
+**Characteristics of Star Schema:
 Star schema model are deliberatly denormalized to speed up the process,
 Dimensional Tables are not normalized.
 The dimension table should contain the set of attributes.
@@ -90,6 +90,17 @@ The main disadvantages is, that data integrity is not enforced as in OLTP databa
 This is not flexible inters of analytical application as normalized databases.
 This model don’t support many to many relationship between business entities. These types of relationships are simplified in star schema
 
+**Snowflake schema
+Benefits of Data Warehouse snowflake schema
+Snowflake model is in same family as the star schema. In fact, it is a special case of star schema. Some of the benifits includes:
+
+Some OLAP multidimensional model tools are optimized to use snowflake schema
+Normalizing table saves the storage
+Improvement in query performance due to minimized disk storage and joining smaller lookup tables
+Disadvantages of Data Warehouse Snowflake schema
+Additional maintenance efforts needed due to the increase number of lookup tables
+SQL queries would have more joins in order to fetch the records
+Data loads into the snowflake model must be highly controlled and managed to avoid update and insert anomalies
 
 OLAP CUBES
 

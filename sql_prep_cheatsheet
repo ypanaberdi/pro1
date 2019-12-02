@@ -103,6 +103,7 @@ SQL queries would have more joins in order to fetch the records
 Data loads into the snowflake model must be highly controlled and managed to avoid update and insert anomalies
 
 OLAP CUBES
+Data Vault
 
 #STATISTICS
 Mode

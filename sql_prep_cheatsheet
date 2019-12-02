@@ -67,6 +67,30 @@ A partial index is useful for commonly used where conditions that use constant v
 # WAREHOUSE CONCEPTS
 SCD types.
 DIMENSIONAL MODELLING
+Granularity is the lowest level of information stored in the table.
+Fact table measurements and dimenstion table attributes. 
+
+Characteristics of Star Schema:
+Star schema model are deliberatly denormalized to speed up the process,
+Dimensional Tables are not normalized.
+The dimension table should contain the set of attributes.
+Dimension table is joined to only Fact tables. They are not joined to each other.
+Fact table stores keys from dimension tables and measure.
+The Star schema is easy to understand and provides optimal disk usage.
+
+Benifits of Data warehouse Star Schema:
+Simple queries: Join conditions are simple joins in this schema
+Simplified business logics: This model simplifies common reporting business logics
+Performance: This model provides performance enhancements for reporting applications
+Fast aggregation
+Feeding cubes: This model is generally used by OLAP systems to build cubes. Building cube is very fast process
+
+Disadvantages of Data warehouse Star Schema:
+The main disadvantages is, that data integrity is not enforced as in OLTP databases
+This is not flexible inters of analytical application as normalized databases.
+This model don’t support many to many relationship between business entities. These types of relationships are simplified in star schema
+
+
 OLAP CUBES
 
 #STATISTICS

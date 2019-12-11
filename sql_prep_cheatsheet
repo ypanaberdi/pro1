@@ -42,7 +42,7 @@ The efficiency of an INDEX RANGE SCAN may vary over a wide range—especially wh
 
 PostgreSQL and the Oracle database trust the DETERMINISTIC or IMMUTABLE declarations—that means they trust the developer.
 
-Indx types:
+Index types:
 B-Tree - For most datatypes and queries
 GIN - For JSONB/hstore/arrays
 GiST - For full text search and geospatial datatypes
@@ -67,21 +67,26 @@ A partial index is useful for commonly used where conditions that use constant v
 DIMENSIONAL MODELLING
 Granularity is the lowest level of information stored in the table.
 Fact table measurements and dimenstion table attributes. 
+Three types of facts 1. Additive 2. Non-additive 3. Semi- additive
+
+Types of Fact Tables:
+Cumulative, usually has all additive facts
+Snapshot, usually has non-additive or semi-additive facts as a snapshot for a particular date.
 
 SCD types:
 SCD 1:
 SCD 2:
 SCD 3:
-SCD 4:
-SCD 5:
-SCD 6:
 
 Steps for dimentional modelling:
 1) Identify Business Process: Business process is they root of the task, so planning starts from there.
 2) Identify Grain (level of detail) : Atomicity, Granularity
 3) Identify Dimensions: Who, What, Where
-4) Identify Facts: When, How Much
+4) Identify Facts: When, Why, How Much
 5) Build Star
+
+Sometimes it might be useful to create date dimension table.
+
 
 **Characteristics of Star Schema:
 Star schema model are deliberatly denormalized to speed up the process,

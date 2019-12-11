@@ -60,15 +60,28 @@ Cardinality relationships between tables can take the form of one-to-one,
 one-to-many (whose reversal is many-to-one) or many-to-many. 
 
 #TUNING/OPTIMIZATION
-
 In all reality, there are only a few cases in which the actual values affect the execution plan. You should therefore use bind parameters if in doubt—just to prevent SQL injections.
 A partial index is useful for commonly used where conditions that use constant values
 
 # WAREHOUSE CONCEPTS
-SCD types.
 DIMENSIONAL MODELLING
 Granularity is the lowest level of information stored in the table.
 Fact table measurements and dimenstion table attributes. 
+
+SCD types:
+SCD 1:
+SCD 2:
+SCD 3:
+SCD 4:
+SCD 5:
+SCD 6:
+
+Steps for dimentional modelling:
+1) Identify Business Process: Business process is they root of the task, so planning starts from there.
+2) Identify Grain (level of detail) : Atomicity, Granularity
+3) Identify Dimensions: Who, What, Where
+4) Identify Facts: When, How Much
+5) Build Star
 
 **Characteristics of Star Schema:
 Star schema model are deliberatly denormalized to speed up the process,
@@ -77,6 +90,7 @@ The dimension table should contain the set of attributes.
 Dimension table is joined to only Fact tables. They are not joined to each other.
 Fact table stores keys from dimension tables and measure.
 The Star schema is easy to understand and provides optimal disk usage.
+Surrogate keys are preferred over natural keys if it is composite.
 
 Benifits of Data warehouse Star Schema:
 Simple queries: Join conditions are simple joins in this schema
@@ -106,6 +120,6 @@ OLAP CUBES
 Data Vault
 
 #STATISTICS
-Mode
-Mean
-Median
+Mode, value that appears most often.
+Mean, avg.
+Median, middle of the sorted.

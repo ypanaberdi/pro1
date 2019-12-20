@@ -94,13 +94,13 @@ Shipment time dimension and delivery time dimension. The key is to remember that
 multiple physical copies of the time dimension table but only create aliases in the logical layer.
 - SCD - A slowly changing dimension as the name suggest, has attributes that do not change frequently but they do change once in a while
 
-
+Surrogate keys generation in staging area with lookup tables.
 
 Role Playing Dimensions: dimension 
 SCD types:
-SCD 1:
-SCD 2:
-SCD 3:
+SCD 1: update the column
+SCD 2: add new row with status identification
+SCD 3: add new column for prev. version, so it will keep both
 SCD 4:
 SCD 5:
 SCD 6:

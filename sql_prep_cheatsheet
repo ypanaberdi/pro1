@@ -95,6 +95,7 @@ multiple physical copies of the time dimension table but only create aliases in 
 - SCD - A slowly changing dimension as the name suggest, has attributes that do not change frequently but they do change once in a while
 
 Surrogate keys generation in staging area with lookup tables.
+Staging area
 
 Role Playing Dimensions: dimension 
 SCD types:

@@ -1,5 +1,10 @@
 PySpark
+Architecture:
+Driver program(Local or Cluster), Executors, Resource manager(YARN)
+Uses DAGs in optimal manner.
+
 
 RDD
+
 
 
